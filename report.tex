@@ -12,16 +12,12 @@
   % every instance of \includegraphics
   \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
 \else
-  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
-  % will default to the driver specified in the system graphics.cfg if no
-  % driver is specified.
-  % \usepackage[dvips]{graphicx}
-  % declare the path(s) where your graphic files are
-  % \graphicspath{{../eps/}}
-  % and their extensions so you won't have to specify these with
-  % every instance of \includegraphics
-  % \{.eps}
 \fi
+
+% @TODO:
+%   - go through and check that writing is in correct tense
+%   - update screenshots
+%   - add content to sections where relevant
 
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
@@ -35,7 +31,6 @@
         Jasper~LaFortune,
         and~Alec~Shields}% <-this % stops a space
 
-
 % The paper headers
 \markboth{CS 461}%
 {Winter 2016}
@@ -45,7 +40,7 @@
 
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
-\begin{abstract} % @TODO: JASPER
+\begin{abstract} % @NOTE: JASPER
 The Department of Integrative Biology at Oregon State has collected a large sample of biodiversity data from various sites in the Southwest United States.
 Handling this data in its raw form requires certain technical knowledge of databases, as well as a bit of patience.
 This presents a problem for biodiversity researchers and Department of Defense land managers, who need to be able to understand and make decisions about this data easily.
@@ -65,7 +60,7 @@ Oregon State biodiversity researchers will provide feedback on how well our prod
 \newpage
 \pagenumbering{arabic}
 
-\section{Project Purposes and Goals} % @TODO: JASPER
+\section{Project Purposes and Goals} % @NOTE: JASPER
 This project aims to aid researchers and land managers in drawing meaningful conclusions from a large set of insect biodiversity data.
 The Department of Defense funded researchers to collect insect samples from many sites across the American Southwest over five years.
 The resulting dataset is too cumbersome to make sense of in raw form, especially for land managers with little formal knowledge of database operations.
@@ -79,7 +74,7 @@ The Graph View shows graphs of the data selected in the Filter View broken down 
 
 \section{Progress}
 
-\subsection{Base Website Setup} % @NOTE: TY - Base Website Setup
+\subsection{Base Website Setup} % @NOTE: TY
 When we were doing our technology review in preparation for writing our design document, we decided on using Django for our web framework, Apache for our web server, Git for our version control system, MySQL for our database, Bootstrap for our front end framework, and c3/arcGIS for our graphing/map views.
 We’ve since organized and set up our back-end web framework correctly for our web app.
 Since Django ships its beginning web structure in a very minimalistic state, (i.e. their templates, views, and models all in just one file with no app structure) We had to modularize those components into their own directories and files.
@@ -102,7 +97,7 @@ We have our system tied to the database perfectly and we are rendering data from
 Our front end framework we chose to implement was Bootstrap.
 Bootstrap is a very well defined CSS/HTML framework and has seen use all kinds of applications, whatever the scale.
 
-\subsection{Main Layout} % @NOTE: TY - Main Layout
+\subsection{Main Layout} % @NOTE: TY
 As dictated in the design document, the main layout of the index page of our app is split into three sections.
 Each section has been individually developed by each member of the team.
 The top right view has an interactive map in a container.
@@ -125,7 +120,7 @@ Each contained view has its own template that is embedded in a primary main temp
 The main challenge with developing our single page web-app was providing data to the various tools we’re making use of in our different containers.
 We have written models that map objects to database entries and allow us to provide serialized data to our templates.
 
-\subsection{Filter View} % @TODO: JASPER
+\subsection{Filter View} % @NOTE: JASPER
 
 The Filter View allows users to select information of interest by date, season, biological taxonomy, or site.
 Selections made in the Filter View affect what is shown in the Map and Graph Views.
@@ -211,7 +206,7 @@ The second major challenge was making filter selections persistent.
 To do this, we had to embed code in our HTML template to populate the fields from the data in the Filter Helper dictionary.
 As such, data flows from the input forms in the Filter View, to the Filter Helper dictionary, back to the input forms.
 
-\subsection{Map View}
+\subsection{Map View} % @NOTE: ALEC
 
 The map view changed quite a bit in its purpose throughout the development of our project.
 In the brainstorming phase of our project we imagined it might be a kind of heat map of biodiversity in different areas.
@@ -278,7 +273,7 @@ At first we envisioned it as a way to display biodiversity, then as a way to sel
 We ended on using it as a way to give context to the data we are looking at, as well as displaying sample location and density.
 While it changed a lot, we found a good way to make it useful to those using our application.
 
-\subsection{Graph View} % @NOTE: TY - Graph View
+\subsection{Graph View} % @NOTE: TY
 The graph view portion of our web tool is beta-level ready.
 We have fully developed charts deployed that render dynamically-loaded data based off of filter input.
 Our goal with these graphs for the beta release was to have each one not only pulling in data from the database, but rendering it in the correct way with x-values and labels set to whatever the parameters of interest implied.
@@ -346,7 +341,7 @@ The end was in sight, but the ability to render dynamic x-values, labels, and y-
 Once we were able to break through those barriers everything seemed to tone down in difficulty.
 As we enter into the production-level phase of development we'll be doing much more polish and refinement than actual feature implementation, which is where we wanted to be.
 
-\subsection{Database and Preparing Data}
+\subsection{Database and Preparing Data} % @NOTE: ALEC
 
 Creating the database and dealing with the raw data was a core component of the project that we anticipated would be one of the easiest, but gave us quite a few difficulties along the way.
 Throughout development we went through several revisions in the design of our database as we grew to better understand the requirements of our project.
