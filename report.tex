@@ -33,7 +33,7 @@
 
 % The paper headers
 \markboth{CS 461}%
-{Winter 2016}
+{Spring 2016}
 
 % make the title area
 \maketitle
@@ -44,15 +44,15 @@
 The Department of Integrative Biology at Oregon State has collected a large sample of biodiversity data from various sites in the Southwest United States.
 Handling this data in its raw form requires certain technical knowledge of databases, as well as a bit of patience.
 This presents a problem for biodiversity researchers and Department of Defense land managers, who need to be able to understand and make decisions about this data easily.
-Our team will address this problem by creating a web interface for spatially visualizing this data.
-We will enable users to easily display useful graphs and maps about areas and species of interest, putting the information they care about most at their fingertips.
+Our team addressed this problem by creating a web interface for spatially visualizing this data.
+We enabled users to easily display useful graphs and maps about areas and species of interest, putting the information they care about most at their fingertips.
 
 The Department of Defense made an investment in collecting all these samples so that it could better manage its land.
 However, extracting meaning from that information is challenging for land managers and researchers alike.
-A good solution to this problem would allow users to easily access the information that is important to them.
-Our solution will provide an interface that allows users to select information of interest and see it in map and graph form.
+Any good solution to this problem would allow users to easily access the information that is important to them.
+Our solution provides an interface that allows users to select information of interest and see it in map and graph form.
 Passerby at Expo will be invited to interact with our system and discover meaningful biodiversity patterns for themselves.
-Oregon State biodiversity researchers will provide feedback on how well our product meets their needs.
+Oregon State biodiversity researchers have indicated that our product meets their needs.
 
 \end{abstract}
 \IEEEpeerreviewmaketitle
@@ -61,22 +61,22 @@ Oregon State biodiversity researchers will provide feedback on how well our prod
 \pagenumbering{arabic}
 
 \section{Project Purposes and Goals} % @NOTE: JASPER
-This project aims to aid researchers and land managers in drawing meaningful conclusions from a large set of insect biodiversity data.
+This project aids researchers and land managers in drawing meaningful conclusions from a large set of insect biodiversity data.
 The Department of Defense funded researchers to collect insect samples from many sites across the American Southwest over five years.
 The resulting dataset is too cumbersome to make sense of in raw form, especially for land managers with little formal knowledge of database operations.
-Our goal is to create a visualization system that allows these parties to select information of interest, display it on a map, and show useful graphs about it.
+Our goal was to create a visualization system that allows these parties to select information of interest, display it on a map, and show useful graphs about it.
 
 These requirements led us to a design comprised of three views.
-The Filter View allows users to select which data will be displayed by date, season, species, or location.
-The Map View shows the locations of the selected samples.
-The Graph View shows graphs of the data selected in the Filter View broken down by location, taxa, and time.
+The Filter View allows users to select which data will be displayed by date, season, species, or location, as shown in Figure~\ref{fig:overall_filter}.
+The Map View shows the locations of the selected samples, as shown in Figure~\ref{fig:default_map}.
+The Graph View shows graphs of the data selected in the Filter View broken down by location, taxa, and time, as shown in Figure~\ref{fig:graph_view}.
 
 
 \section{Progress}
 
 \subsection{Base Website Setup} % @NOTE: TY
 When we were doing our technology review in preparation for writing our design document, we decided on using Django for our web framework, Apache for our web server, Git for our version control system, MySQL for our database, Bootstrap for our front end framework, and c3/arcGIS for our graphing/map views.
-We’ve since organized and set up our back-end web framework correctly for our web app.
+We have since organized and set up our back-end web framework correctly for our web app.
 Since Django ships its beginning web structure in a very minimalistic state, (i.e. their templates, views, and models all in just one file with no app structure) We had to modularize those components into their own directories and files.
 It wasn’t a long and arduous process, but it did take a bit of time learning how to go about doing that since we were all new to using Django.
 
@@ -86,7 +86,7 @@ We went through the process of deployment and have gone through the proper chann
 Apache combined with mod_wsgi.py were required for deploying our site statically on our remote server.
 The only real challenge with getting Apache up and running was installing one dependency called mod_wsgi.py which is required for Apache to serve Django content to the web, even on localhost.
 
-Tracking our progress in development has been a breeze with Github.
+Tracking our progress in development has been simple with Github.
 We use the branching feature for each of us to introduce new features to our project.
 Since each of us is in charge of one view (functionality) branching that is very easy and we still use it for making core changes to the framework.
 We also track new features and issues with Git’s issue tracker and assign them all to milestones so we can properly prioritize changes by whether or not they’re in the coming release.
@@ -176,7 +176,7 @@ Expanding or collapsing children simply determines whether or not they show on s
 \captionsetup{justification=centering}
 \caption{
   The Taxa Filter allows the user to select an arbitrary level of biological taxonomy and all its children.
-  For example, selecting the family Gerridae in the order Hemiptera selects all genuses and species inthe Gerridae family.
+  For example, selecting the family Gerridae in the order Hemiptera selects all genuses and species in the Gerridae family.
   Because the input is a radio button, the user cannot simultaneously select siblings.
 }
 \label{fig:taxa_filter}
@@ -283,7 +283,7 @@ The x-values are dynamically set to the sub-locations relative to the location l
 We currently have all three graphs in place that our client requested.
 We are able to customize every aspect of them in regards to color, spacing, font, layout, etc.
 An example of what the graph-portion looks like is shown in Figure~\ref{fig:graph_view}.
-When the page is resized to be smaller, the graph window view will display a horizontal scroll bar so that the user can still see the metrics they’re interested in without having to scrunch them up.
+When the page is resized to be smaller, the graph window view will display a horizontal scroll bar so that the user can still see the metrics they’re interested in without having to make them too small to see.
 
 \begin{figure}[h]
 \centering
@@ -296,7 +296,7 @@ When the page is resized to be smaller, the graph window view will display a hor
 \label{fig:graph_view}
 \end{figure}
 
-The three different graphs that we were successfully able to pull data into and render meaningful statistics in were the stacked bar chat, pie chart and line chart.
+The three different graphs that we were successfully able to pull data into and render meaningful statistics in were the stacked bar chat, pie chart, and line chart.
 The stacked bar chart is showing the number of unique taxa within a certain taxonomic level at each location.
 The pie chart is showing the distribution of unique taxa overall for all locations within the scope selected by the user.
 Finally, the line chart is showing the number of unique taxa observed across all locations over time (years).
