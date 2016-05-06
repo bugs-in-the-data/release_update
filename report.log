@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.21)  6 MAY 2016 15:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.21)  6 MAY 2016 16:25
 entering extended mode
 **report.tex
 (C:\Users\shieldal\Documents\expo\release_update\report.tex
@@ -318,7 +318,7 @@ Package pdftex.def Info: images/default_map.png used on input line 224.
 File: images/filtered_map.png Graphic file (type png)
 
 <use images/filtered_map.png>
-Package pdftex.def Info: images/filtered_map.png used on input line 242.
+Package pdftex.def Info: images/filtered_map.png used on input line 243.
 (pdftex.def)             Requested size: 328.82707pt x 201.3367pt.
  [5 <C:/Users/shieldal/Documents/expo/release_update/images/filtered_map.png>]
 Missing character: There is no â in font ptmr7t!
@@ -329,50 +329,54 @@ Missing character: There is no ™ in font ptmr7t!
 File: images/graph_view.png Graphic file (type png)
 
 <use images/graph_view.png>
-Package pdftex.def Info: images/graph_view.png used on input line 290.
+Package pdftex.def Info: images/graph_view.png used on input line 296.
 (pdftex.def)             Requested size: 352.31625pt x 99.43434pt.
 
 <images/bar_chart.png, id=35, 750.805pt x 366.36874pt>
 File: images/bar_chart.png Graphic file (type png)
 
 <use images/bar_chart.png>
-Package pdftex.def Info: images/bar_chart.png used on input line 314.
+Package pdftex.def Info: images/bar_chart.png used on input line 320.
 (pdftex.def)             Requested size: 328.82707pt x 160.45923pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ˜ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- [6 <C:/Users/shieldal/Documents/expo/release_update/images/graph_view.png> <C:
-/Users/shieldal/Documents/expo/release_update/images/bar_chart.png>]
-<images/bar_chart_collapsed.png, id=42, 752.8125pt x 371.3875pt>
+<images/bar_chart_collapsed.png, id=36, 752.8125pt x 371.3875pt>
 File: images/bar_chart_collapsed.png Graphic file (type png)
 
 <use images/bar_chart_collapsed.png>
-Package pdftex.def Info: images/bar_chart_collapsed.png used on input line 330.
+Package pdftex.def Info: images/bar_chart_collapsed.png used on input line 336.
 
 (pdftex.def)             Requested size: 328.82707pt x 162.22661pt.
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
-
-<images/old_schema.png, id=43, 492.84125pt x 445.665pt>
-File: images/old_schema.png Graphic file (type png)
-
-<use images/old_schema.png>
-Package pdftex.def Info: images/old_schema.png used on input line 363.
-(pdftex.def)             Requested size: 281.85587pt x 254.88852pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7 <C:/Users/shieldal/Documents/expo/release_update/images/bar_chart_collapsed.
-png>] <images/new_schema.png, id=48, 666.49pt x 246.9225pt>
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+[6 <C:/Users/shieldal/Documents/expo/release_update/images/graph_view.png>]
+[7 <C:/Users/shieldal/Documents/expo/release_update/images/bar_chart.png> <C:/U
+sers/shieldal/Documents/expo/release_update/images/bar_chart_collapsed.png>]
+<images/old_schema.png, id=47, 492.84125pt x 445.665pt>
+File: images/old_schema.png Graphic file (type png)
+
+<use images/old_schema.png>
+Package pdftex.def Info: images/old_schema.png used on input line 369.
+(pdftex.def)             Requested size: 281.85587pt x 254.88852pt.
+
+<images/new_schema.png, id=48, 666.49pt x 246.9225pt>
 File: images/new_schema.png Graphic file (type png)
 
 <use images/new_schema.png>
-Package pdftex.def Info: images/new_schema.png used on input line 382.
+Package pdftex.def Info: images/new_schema.png used on input line 388.
 (pdftex.def)             Requested size: 328.82707pt x 121.82573pt.
  [8 <C:/Users/shieldal/Documents/expo/release_update/images/old_schema.png> <C:
 /Users/shieldal/Documents/expo/release_update/images/new_schema.png>] [9]
@@ -388,12 +392,12 @@ Here is how much of TeX's memory you used:
  6412 multiletter control sequences out of 15000+200000
  35174 words of font info for 64 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 36i,6n,39p,432b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,5n,39p,432b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2
 .9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (10 pages, 1501907 bytes).
+Output written on report.pdf (10 pages, 1502598 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -233,9 +233,10 @@ After talking about these issues with the map with our client, we arrived at our
 The purpose of this final map is to show the location and relative density of samples.
 It plots every valid sample on the map as its own point.
 These points are semi-transparent so that you can tell how dense the sampling in an area is based on how opaque that area is.
-It is affected by the location and date filters, which ends up showing you where the data is coming from and where it is localized.
+It is affected by the location, taxa, and date filters, which ends up showing you where the data is coming from and where it is localized.
+You can hover over any point on the map in order to see the name of that sample, as well as the base, drainage basin, and site that it is a part of.
 Every time the map is filtered it zooms to fit only the selected points which can be seen if Figure~\ref{fig:filtered_map}.
-The map turned out a lot different than we first thought it to be, but it important in giving context to the data that is being viewed.
+The map turned out a lot different than we first thought it to be, but it is important in giving context to the data that is being viewed.
 
 \begin{figure}[h]
 	\centering
@@ -267,6 +268,11 @@ To solve the issue, we made use of the filtering feature of our application.
 We rendered different groups of points until we broke the map, then looked at each group within that group until we broke the map, and so on.
 Eventually we had narrowed it down to the point that was causing the problem.
 Then, we simply hid that point and the zooming feature of the map worked perfectly fine.
+
+Another bug we fixed in the final stretch of the project was that some of the sites didn't have coordinates, and if you only had sites without coordinates the map wouldn't load and would look broken.
+After some troubleshooting we found that we could fix this problem by simply checking if at least one points in the filtered data had coordinates.
+If we found that there weren't any coordinates to zoom in on we would simply the map on its default setting.
+If no points show up it kind of looks like our application isn't working so we added an alert that lets the user know that the selected points don't have coordinates.
 
 The map component of the project probably changed the most throughout development.
 At first we envisioned it as a way to display biodiversity, then as a way to select our desired data.
