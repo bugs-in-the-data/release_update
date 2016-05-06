@@ -80,11 +80,11 @@ We have since organized and set up our back-end web framework correctly for our 
 Since Django ships its beginning web structure in a very minimalistic state, (i.e. their templates, views, and models all in just one file with no app structure) We had to modularize those components into their own directories and files.
 It wasn’t a long and arduous process, but it did take a bit of time learning how to go about doing that since we were all new to using Django.
 
-Our web server configuration for development is fairly minimal at the moment.
-We are still development, which means we’re making all of our features on our local machines.
-However, we are now beginning the process of deployment and have gone through the proper channels for gaining access to a remote server that we will put our web tool on.
-Apache does not require much set up to deploy your projects to localhost.
-The only real challenge with getting Apache up and running was installing one dependency called MOD-WSGI which is required for Apache to serve Django content to the web, even on localhost.
+Our web server configuration for development is now completely configured and deployed for off-campus access.
+When we were still in development, we were making all of our features on our local machines.
+We went through the process of deployment and have gone through the proper channels for gaining access to a remote server that we will put our web tool on.
+Apache combined with mod\_wsgi.py were required for deploying our site statically on our remote server.
+The only real challenge with getting Apache up and running was installing one dependency called mod\_wsgi.py which is required for Apache to serve Django content to the web, even on localhost.
 
 Tracking our progress in development has been simple with Github.
 We use the branching feature for each of us to introduce new features to our project.
@@ -274,17 +274,20 @@ We ended on using it as a way to give context to the data we are looking at, as 
 While it changed a lot, we found a good way to make it useful to those using our application.
 
 \subsection{Graph View} % @NOTE: TY
-The graph view portion of our web tool is beta-level ready.
+The graph view portion of our web tool is production-level ready.
 We have fully developed charts deployed that render dynamically-loaded data based off of filter input.
-Our goal with these graphs for the beta release was to have each one not only pulling in data from the database, but rendering it in the correct way with x-values and labels set to whatever the parameters of interest implied.
-While we have three graphs that show exactly what our sponsor requested, we still have a little bit of honing to do in terms of a stretch goal to get very specific graphs to display.
+Our graphs pull in data dynamically from the database and are then filtered down by the filter form variables.
+Our currency for the graph data-points is number of unique species observed (except for the line chart which includes sampling rates).
+The x-values are dynamically set to the sub-locations relative to the location level set in the filter field.
+
+We currently have all three graphs in place that our client requested.
 We are able to customize every aspect of them in regards to color, spacing, font, layout, etc.
 An example of what the graph-portion looks like is shown in Figure~\ref{fig:graph_view}.
 When the page is resized to be smaller, the graph window view will display a horizontal scroll bar so that the user can still see the metrics they’re interested in without having to make them too small to see.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.75\textwidth]{images/graph_view.jpg}
+\includegraphics[width=0.75\textwidth]{images/graph_view.png}
 \captionsetup{justification=centering}
 \caption{
   The overall graph view.
@@ -332,8 +335,8 @@ If the user wants to ‘zoom in’ on those particular small readings, they coul
 \label{fig:bar_chart_collapsed}
 \end{figure}
 
-During development we encountered some varyingly-sized problems that slowed us down, but we were able to overcome them before beta release.
-The ability to supply data and render accurate graphs dynamically was our goal for the graph view come beta release, but it took some hard work to get it to the point it's at.
+During development we encountered some varyingly-sized problems that slowed us down, but we were able to overcome them before production release.
+The ability to supply data and render accurate graphs dynamically and accurately was our goal for the graph view come production release, but it took some hard work to get it to the point it's at.
 None of us have used Django in the past and its ORM (object relational mapping) model structure, for constructing and querying objects from the database, was completely foreign to us.
 Once we were able to learn how Django does it’s aggregate queries to the database it became a little bit more clear how to perform our queries, but it still proves to be challenging.
 Early on after alpha release we were able to get all the static data supplied to the graphs replaced with dynamic data.
